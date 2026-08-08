@@ -94,14 +94,50 @@ async function cargarProductos() {
 }
 
 /**
+ * Genera el HTML interno de colores y tallas disponibles.
+ * @param {{colores?:string[], tallas?:string[]}} producto
+ * @returns {string}
+ */
+function renderOpcionesProducto(producto) {
+    const colores = Array.isArray(producto.colores) ? producto.colores : [];
+    const tallas = Array.isArray(producto.tallas) ? producto.tallas : [];
+
+    const coloresHtml = colores.length
+        ? `
+            <div class="producto-opcion">
+                <span class="producto-opcion-label">Colores</span>
+                <div class="producto-opcion-lista">
+                    ${colores.map((color) => `<span class="producto-chip">${color}</span>`).join("")}
+                </div>
+            </div>
+        `
+        : "";
+
+    const tallasHtml = tallas.length
+        ? `
+            <div class="producto-opcion">
+                <span class="producto-opcion-label">Tallas</span>
+                <div class="producto-opcion-lista">
+                    ${tallas.map((talla) => `<span class="producto-chip producto-chip-talla">${talla}</span>`).join("")}
+                </div>
+            </div>
+        `
+        : "";
+
+    return `${coloresHtml}${tallasHtml}`;
+}
+
+/**
  * Muestra el detalle de una prenda en el modal.
- * @param {{nombre:string, descripcion:string, precio:number, imagen:string}} producto
+ * @param {{codigo?:string, nombre:string, descripcion:string, precio:number, imagen:string, colores?:string[], tallas?:string[]}} producto
  */
 function abrirModalProducto(producto) {
     const modalEl = document.getElementById("modalProducto");
     const titulo = document.getElementById("modalProductoTitulo");
+    const codigo = document.getElementById("modalProductoCodigo");
     const imagen = document.getElementById("modalProductoImagen");
     const descripcion = document.getElementById("modalProductoDescripcion");
+    const opciones = document.getElementById("modalProductoOpciones");
     const precio = document.getElementById("modalProductoPrecio");
 
     if (!modalEl || !titulo || !imagen || !descripcion || !precio) {
@@ -110,12 +146,22 @@ function abrirModalProducto(producto) {
     }
 
     const nombre = producto.nombre || "Producto";
-    const rutaImagen = producto.imagen || "img/prendas/prenda01.jpg";
+    const rutaImagen = producto.imagen || "img/prendas/KB-001.jpg";
+    const codigoTexto = producto.codigo || "";
 
     titulo.textContent = nombre;
+    if (codigo) {
+        codigo.textContent = codigoTexto ? `Código: ${codigoTexto}` : "";
+        codigo.classList.toggle("d-none", !codigoTexto);
+    }
     imagen.src = rutaImagen;
     imagen.alt = nombre;
     descripcion.textContent = producto.descripcion || "";
+    if (opciones) {
+        const html = renderOpcionesProducto(producto);
+        opciones.innerHTML = html;
+        opciones.classList.toggle("d-none", !html);
+    }
     precio.textContent = formatearPrecio(producto.precio ?? 0);
 
     const modal = bootstrap.Modal.getOrCreateInstance(modalEl);
@@ -149,10 +195,12 @@ function mostrarProductos(productos) {
         const columna = document.createElement("div");
         columna.className = "col-12 col-sm-6 col-md-4 col-lg-3";
 
-        const imagen = producto.imagen || "img/prendas/prenda01.jpg";
+        const imagen = producto.imagen || "img/prendas/KB-001.jpg";
         const nombre = producto.nombre || "Producto";
         const descripcion = producto.descripcion || "";
+        const codigo = producto.codigo || "";
         const precio = formatearPrecio(producto.precio ?? 0);
+        const opcionesHtml = renderOpcionesProducto(producto);
 
         columna.innerHTML = `
             <article class="card producto-card h-100 border-0">
@@ -172,8 +220,10 @@ function mostrarProductos(productos) {
                     </button>
                 </div>
                 <div class="card-body d-flex flex-column">
+                    ${codigo ? `<p class="producto-codigo mb-1">Código: ${codigo}</p>` : ""}
                     <h3 class="card-title h5">${nombre}</h3>
                     <p class="card-text flex-grow-1">${descripcion}</p>
+                    ${opcionesHtml ? `<div class="producto-opciones">${opcionesHtml}</div>` : ""}
                     <p class="producto-precio mb-0">${precio}</p>
                 </div>
             </article>

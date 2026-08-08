@@ -402,6 +402,16 @@ section {
     padding: 1.25rem 1.15rem 1.4rem;
 }
 
+.producto-codigo {
+    font-family: var(--fuente-texto);
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-dorado);
+    margin-bottom: 0.35rem;
+}
+
 .producto-card .card-title {
     font-family: var(--fuente-display);
     font-size: 1.35rem;
@@ -411,7 +421,47 @@ section {
 .producto-card .card-text {
     color: var(--color-gris-texto);
     font-size: 0.92rem;
+    margin-bottom: 0.85rem;
+}
+
+.producto-opciones {
+    display: grid;
+    gap: 0.65rem;
     margin-bottom: 1rem;
+}
+
+.producto-opcion-label {
+    display: block;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-gris-texto);
+    margin-bottom: 0.35rem;
+}
+
+.producto-opcion-lista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+}
+
+.producto-chip {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.2rem 0.55rem;
+    border: 1px solid var(--color-beige-oscuro);
+    background: var(--color-gris);
+    color: var(--color-negro);
+    font-size: 0.78rem;
+    line-height: 1.2;
+}
+
+.producto-chip-talla {
+    min-width: 2rem;
+    justify-content: center;
+    font-weight: 600;
+    letter-spacing: 0.04em;
 }
 
 .producto-precio {
