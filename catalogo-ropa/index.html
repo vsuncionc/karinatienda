@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Catálogo digital de prendas de vestir">
+    <title>Mi Tienda | Catálogo de Ropa</title>
+
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Bootstrap Icons CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <!-- Tipografías -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <!-- ========== HEADER ========== -->
+    <header class="site-header sticky-top">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <!-- Cambia el nombre de la tienda aquí -->
+                <a class="navbar-brand brand-name" href="#inicio">MI TIENDA</a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#menuPrincipal" aria-controls="menuPrincipal"
+                        aria-expanded="false" aria-label="Abrir menú">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="menuPrincipal">
+                    <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#inicio">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#catalogo">Catálogo</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contacto">Contacto</a>
+                        </li>
+                        <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+                            <a class="btn btn-tienda" href="#catalogo">Ver catálogo</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ========== BANNER PRINCIPAL (HERO) ========== -->
+    <section id="inicio" class="hero">
+        <div class="hero-media" aria-hidden="true">
+            <img src="img/prendas/banner.jpg"
+                 alt=""
+                 onerror="this.onerror=null; this.src='https://placehold.co/1920x1080/1a1a1a/e8ddd2?text=Moda+%26+Estilo';">
+            <div class="hero-overlay"></div>
+        </div>
+
+        <div class="hero-content container">
+            <!-- Cambia el nombre de la tienda aquí también -->
+            <p class="hero-brand">MI TIENDA</p>
+            <h1 class="hero-title">Descubre tu estilo</h1>
+            <p class="hero-subtitle">Moda, elegancia y tendencia</p>
+            <a class="btn btn-tienda btn-tienda-claro" href="#catalogo">VER CATÁLOGO</a>
+        </div>
+    </section>
+
+    <!-- ========== CATÁLOGO ========== -->
+    <section id="catalogo" class="seccion catalogo">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="seccion-titulo">Catálogo de Prendas</h2>
+                <p class="seccion-subtitulo">Encuentra tu estilo favorito</p>
+            </div>
+
+            <!-- Mensaje de carga -->
+            <div id="mensaje-carga" class="text-center py-5 mensaje-estado">
+                <div class="spinner-tienda" role="status" aria-hidden="true"></div>
+                <p class="mb-0">Cargando catálogo...</p>
+            </div>
+
+            <!-- Mensaje de error -->
+            <div id="mensaje-error" class="mensaje-error text-center d-none" role="alert">
+                No se pudo cargar el catálogo.
+            </div>
+
+            <!-- Las tarjetas se generan dinámicamente desde productos.json -->
+            <div id="productos-container" class="row g-4"></div>
+        </div>
+    </section>
+
+    <!-- ========== CONTACTO ========== -->
+    <section id="contacto" class="seccion contacto">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="seccion-titulo">Contáctanos</h2>
+                <p class="seccion-subtitulo">Escríbenos y encuentra tu próxima prenda</p>
+            </div>
+
+            <!--
+                Enlaces de redes sociales (información de ejemplo).
+                Cambia los href por tus enlaces reales.
+            -->
+            <div class="contacto-lista">
+                <a class="contacto-enlace"
+                   href="https://wa.me/51999999999"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   id="enlace-whatsapp"
+                   aria-label="WhatsApp">
+                    <i class="bi bi-whatsapp" aria-hidden="true"></i>
+                    <span>WhatsApp</span>
+                </a>
+
+                <a class="contacto-enlace"
+                   href="https://www.instagram.com/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   id="enlace-instagram"
+                   aria-label="Instagram">
+                    <i class="bi bi-instagram" aria-hidden="true"></i>
+                    <span>Instagram</span>
+                </a>
+
+                <a class="contacto-enlace"
+                   href="https://www.facebook.com/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   id="enlace-facebook"
+                   aria-label="Facebook">
+                    <i class="bi bi-facebook" aria-hidden="true"></i>
+                    <span>Facebook</span>
+                </a>
+
+                <a class="contacto-enlace"
+                   href="https://www.tiktok.com/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   id="enlace-tiktok"
+                   aria-label="TikTok">
+                    <i class="bi bi-tiktok" aria-hidden="true"></i>
+                    <span>TikTok</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== MODAL DETALLE PRODUCTO ========== -->
+    <div class="modal fade" id="modalProducto" tabindex="-1" aria-labelledby="modalProductoTitulo" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content producto-modal">
+                <div class="modal-header border-0">
+                    <h2 class="modal-title h4" id="modalProductoTitulo"></h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row g-4 align-items-center">
+                        <div class="col-md-6">
+                            <img id="modalProductoImagen" class="img-fluid producto-modal-img" src="" alt="">
+                        </div>
+                        <div class="col-md-6">
+                            <p id="modalProductoDescripcion" class="producto-modal-desc"></p>
+                            <p id="modalProductoPrecio" class="producto-precio producto-modal-precio mb-0"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="site-footer">
+        <div class="container">
+            <!-- Cambia el nombre de la tienda aquí -->
+            <p class="brand-name">MI TIENDA</p>
+            <p class="footer-descripcion">Catálogo Digital de Prendas de Vestir</p>
+            <p class="footer-copy">© 2026 Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
+
+    <!-- Aplicación del catálogo -->
+    <script src="js/app.js"></script>
+</body>
+</html>
