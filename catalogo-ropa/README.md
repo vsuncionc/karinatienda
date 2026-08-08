@@ -1,4 +1,4 @@
-# MI TIENDA — Catálogo Digital de Prendas de Vestir
+# Karina Boutique — Catálogo Digital de Prendas de Vestir
 
 Página web estática y profesional para promocionar prendas de vestir.  
 El catálogo se genera dinámicamente leyendo un archivo `productos.json` con JavaScript puro.  
@@ -185,7 +185,7 @@ En pantalla se mostrará como: **S/ 89.90**
 
 ## 10. Cómo cambiar el nombre de la tienda
 
-Busca el texto **MI TIENDA** en `index.html` (aparece en el header, el hero y el footer) y reemplázalo por el nombre de tu marca.  
+Busca **Karina** y **Boutique** en `index.html` (header, hero y footer) y reemplázalos por el nombre de tu marca.  
 También puedes actualizar el `<title>` en el `<head>`.
 
 ---

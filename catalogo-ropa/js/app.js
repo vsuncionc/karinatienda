@@ -1,5 +1,5 @@
 /**
- * Catálogo Digital de Prendas — MI TIENDA
+ * Catálogo Digital de Prendas — Karina Boutique
  * Lee productos.json y genera las tarjetas dinámicamente.
  */
 

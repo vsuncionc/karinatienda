@@ -1,6 +1,6 @@
 /* =========================================================
-   MI TIENDA — Estilos personalizados
-   Paleta: blanco, negro, beige, rosa suave, gris claro
+   Karina Boutique — Estilos personalizados
+   Paleta: blanco, negro, beige, rosa suave, dorado
    ========================================================= */
 
 :root {
@@ -10,11 +10,15 @@
     --color-beige-oscuro: #c9b8a8;
     --color-rosa: #e8c4c4;
     --color-rosa-suave: #f7eaea;
+    --color-rosa-oscuro: #b76e79;
+    --color-dorado: #c9a227;
+    --color-dorado-claro: #e8d5a3;
     --color-gris: #f3f1ef;
     --color-gris-texto: #6b6560;
     --color-sombra: rgba(26, 26, 26, 0.12);
 
     --fuente-display: "Cormorant Garamond", Georgia, serif;
+    --fuente-script: "Great Vibes", "Cormorant Garamond", cursive;
     --fuente-texto: "Outfit", "Segoe UI", sans-serif;
 
     --transicion: 0.3s ease;
@@ -63,13 +67,41 @@ section {
     z-index: 1030;
 }
 
-/* Nombre de la tienda: cambia solo este texto en HTML */
+/* Marca Karina Boutique */
 .brand-name {
-    font-size: 1.65rem;
-    font-weight: 600;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 1;
+    gap: 0.05rem;
     color: var(--color-negro);
-    letter-spacing: 0.08em;
+}
+
+.brand-karina {
+    font-family: var(--fuente-script);
+    font-size: 2.35rem;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    background: linear-gradient(135deg, #b8860b 0%, #e8d5a3 40%, #c9a227 70%, #8a6d1a 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 1px 0 rgba(201, 162, 39, 0.15);
+    filter: drop-shadow(0 1px 1px rgba(26, 26, 26, 0.12));
+}
+
+.brand-boutique {
+    font-family: var(--fuente-texto);
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.42em;
     text-transform: uppercase;
+    color: var(--color-rosa-oscuro);
+    margin-left: 0.15rem;
+}
+
+.navbar-brand.brand-name:hover .brand-karina {
+    filter: drop-shadow(0 2px 4px rgba(201, 162, 39, 0.35));
 }
 
 .navbar-nav .nav-link {
@@ -172,13 +204,28 @@ section {
 }
 
 .hero-brand {
-    font-family: var(--fuente-display);
-    font-size: clamp(2.8rem, 8vw, 5.5rem);
-    font-weight: 500;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    margin-bottom: 0.75rem;
-    line-height: 1.05;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+    line-height: 1;
+    gap: 0.2rem;
+}
+
+.hero-brand .brand-karina {
+    font-size: clamp(3.6rem, 11vw, 6.5rem);
+    background: linear-gradient(135deg, #f3e2a8 0%, #fff8e7 35%, #e0c56a 65%, #c9a227 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    filter: drop-shadow(0 4px 18px rgba(0, 0, 0, 0.35));
+}
+
+.hero-brand .brand-boutique {
+    font-size: clamp(0.75rem, 2vw, 1rem);
+    letter-spacing: 0.55em;
+    color: var(--color-dorado-claro);
+    margin-left: 0.35em;
 }
 
 .hero-title {
@@ -418,9 +465,21 @@ section {
 }
 
 .site-footer .brand-name {
-    color: var(--color-blanco);
-    font-size: 1.5rem;
-    margin-bottom: 0.35rem;
+    align-items: center;
+    margin-bottom: 0.65rem;
+}
+
+.site-footer .brand-karina {
+    font-size: 2.75rem;
+    background: linear-gradient(135deg, #e8d5a3 0%, #fff4cc 45%, #c9a227 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.site-footer .brand-boutique {
+    color: var(--color-rosa);
+    letter-spacing: 0.48em;
 }
 
 .footer-descripcion {
