@@ -318,12 +318,30 @@ section {
 }
 
 .producto-img-btn {
+    position: relative;
     display: block;
     width: 100%;
     padding: 0;
     border: 0;
     background: transparent;
     cursor: pointer;
+}
+
+/* Veladura negra clara transparente al pasar el mouse */
+.producto-img-btn::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+    opacity: 0;
+    transition: opacity 0.35s ease;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.producto-img-btn:hover::after,
+.producto-card:hover .producto-img-btn::after {
+    opacity: 1;
 }
 
 .producto-card img,
