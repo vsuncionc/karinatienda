@@ -128,14 +128,79 @@ function renderOpcionesProducto(producto) {
 }
 
 /**
+ * Obtiene la lista de imágenes de un producto.
+ * @param {{imagen?:string, imagenes?:string[]}} producto
+ * @returns {string[]}
+ */
+function obtenerImagenesProducto(producto) {
+    if (Array.isArray(producto.imagenes) && producto.imagenes.length > 0) {
+        return producto.imagenes.filter(Boolean);
+    }
+    return [producto.imagen || "img/prendas/KB-001.jpg"];
+}
+
+/**
+ * Renderiza las miniaturas de la galería del modal.
+ * @param {string[]} imagenes
+ * @param {string} nombre
+ * @param {HTMLImageElement} imagenPrincipal
+ * @param {HTMLElement|null} thumbsEl
+ */
+function renderGaleriaModal(imagenes, nombre, imagenPrincipal, thumbsEl) {
+    const principal = imagenes[0];
+    imagenPrincipal.src = principal;
+    imagenPrincipal.alt = nombre;
+
+    if (!thumbsEl) {
+        return;
+    }
+
+    if (imagenes.length <= 1) {
+        thumbsEl.innerHTML = "";
+        thumbsEl.classList.add("d-none");
+        return;
+    }
+
+    thumbsEl.classList.remove("d-none");
+    thumbsEl.innerHTML = imagenes
+        .map(
+            (ruta, index) => `
+            <button
+                type="button"
+                class="producto-modal-thumb${index === 0 ? " is-active" : ""}"
+                data-imagen="${ruta}"
+                aria-label="Ver imagen ${index + 1} de ${nombre}"
+            >
+                <img src="${ruta}" alt="${nombre} - imagen ${index + 1}" loading="lazy">
+            </button>
+        `
+        )
+        .join("");
+
+    thumbsEl.querySelectorAll(".producto-modal-thumb").forEach((boton) => {
+        boton.addEventListener("click", () => {
+            const ruta = boton.getAttribute("data-imagen");
+            if (!ruta) {
+                return;
+            }
+            imagenPrincipal.src = ruta;
+            thumbsEl.querySelectorAll(".producto-modal-thumb").forEach((el) => {
+                el.classList.toggle("is-active", el === boton);
+            });
+        });
+    });
+}
+
+/**
  * Muestra el detalle de una prenda en el modal.
- * @param {{codigo?:string, nombre:string, descripcion:string, precio:number, imagen:string, colores?:string[], tallas?:string[]}} producto
+ * @param {{codigo?:string, nombre:string, descripcion:string, precio:number, imagen:string, imagenes?:string[], colores?:string[], tallas?:string[]}} producto
  */
 function abrirModalProducto(producto) {
     const modalEl = document.getElementById("modalProducto");
     const titulo = document.getElementById("modalProductoTitulo");
     const codigo = document.getElementById("modalProductoCodigo");
     const imagen = document.getElementById("modalProductoImagen");
+    const thumbs = document.getElementById("modalProductoThumbs");
     const descripcion = document.getElementById("modalProductoDescripcion");
     const opciones = document.getElementById("modalProductoOpciones");
     const precio = document.getElementById("modalProductoPrecio");
@@ -146,16 +211,15 @@ function abrirModalProducto(producto) {
     }
 
     const nombre = producto.nombre || "Producto";
-    const rutaImagen = producto.imagen || "img/prendas/KB-001.jpg";
     const codigoTexto = producto.codigo || "";
+    const imagenes = obtenerImagenesProducto(producto);
 
     titulo.textContent = nombre;
     if (codigo) {
         codigo.textContent = codigoTexto ? `Código: ${codigoTexto}` : "";
         codigo.classList.toggle("d-none", !codigoTexto);
     }
-    imagen.src = rutaImagen;
-    imagen.alt = nombre;
+    renderGaleriaModal(imagenes, nombre, imagen, thumbs);
     descripcion.textContent = producto.descripcion || "";
     if (opciones) {
         const html = renderOpcionesProducto(producto);

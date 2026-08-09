@@ -313,31 +313,16 @@
         "id": 32,
         "codigo": "KB-032",
         "nombre": "Vestido Midi Terracota",
-        "descripcion": "Vestido midi entallado color terracota, sin mangas y con espalda abierta.",
+        "descripcion": "Vestido midi entallado color terracota, sin mangas y con espalda abierta. Incluye variantes en verde limón y dorado.",
         "precio": 119.90,
-        "colores": ["Terracota"],
-        "tallas": ["S","M","L"],
-        "imagen": "img/prendas/KB-032.jpg"
-    },
-    {
-        "id": 33,
-        "codigo": "KB-033",
-        "nombre": "Vestido Verde Halter",
-        "descripcion": "Vestido corto verde limón con cuello halter, textura plisada y falda evasé.",
-        "precio": 109.90,
-        "colores": ["Verde limón"],
-        "tallas": ["S","M","L"],
-        "imagen": "img/prendas/KB-033.jpg"
-    },
-    {
-        "id": 34,
-        "codigo": "KB-034",
-        "nombre": "Vestido Dorado Brillante",
-        "descripcion": "Vestido corto de un solo hombro en tono dorado con brillo metálico.",
-        "precio": 129.90,
-        "colores": ["Dorado"],
-        "tallas": ["S","M","L"],
-        "imagen": "img/prendas/KB-034.jpg"
+        "colores": ["Terracota", "Verde limón", "Dorado"],
+        "tallas": ["S", "M", "L"],
+        "imagen": "img/prendas/KB-032.jpg",
+        "imagenes": [
+            "img/prendas/KB-032.jpg",
+            "img/prendas/KB-033.jpg",
+            "img/prendas/KB-034.jpg"
+        ]
     },
     {
         "id": 35,
@@ -346,7 +331,7 @@
         "descripcion": "Conjunto de top con volantes y short con cinturón, estampado abstracto verde y blanco.",
         "precio": 109.90,
         "colores": ["Verde / Blanco"],
-        "tallas": ["S","M","L","XL"],
+        "tallas": ["S", "M", "L", "XL"],
         "imagen": "img/prendas/KB-035.jpg"
     }
 ]
