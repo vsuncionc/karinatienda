@@ -1,0 +1,337 @@
+[
+    {
+        "id": 1,
+        "codigo": "KB-001",
+        "nombre": "Blusa Terracota Paisley",
+        "descripcion": "Blusa de manga larga en tono terracota con bordado paisley blanco y botones oscuros.",
+        "precio": 69.90,
+        "colores": ["Terracota"],
+        "tallas": ["S","M","L","XL"],
+        "imagen": "img/prendas/KB-001.jpg"
+    },
+    {
+        "id": 2,
+        "codigo": "KB-002",
+        "nombre": "Vestido Verde Brillante",
+        "descripcion": "Vestido corto de un solo hombro en verde oscuro con brillo metálico y cadena decorativa.",
+        "precio": 129.90,
+        "colores": ["Verde"],
+        "tallas": ["S","M","L"],
+        "imagen": "img/prendas/KB-002.jpg"
+    },
+    {
+        "id": 3,
+        "codigo": "KB-003",
+        "nombre": "Blusa Rosa Bordada",
+        "descripcion": "Blusa elegante en tono rosa taupe con bordado crema estilo paisley.",
+        "precio": 69.90,
+        "colores": ["Rosa taupe","Terracota","Negro"],
+        "tallas": ["S","M","L","XL"],
+        "imagen": "img/prendas/KB-003.jpg"
+    },
+    {
+        "id": 4,
+        "codigo": "KB-004",
+        "nombre": "Top Mostaza Floral",
+        "descripcion": "Top entallado color mostaza con tirantes asimétricos y flor artesanal.",
+        "precio": 49.90,
+        "colores": ["Mostaza","Púrpura","Verde"],
+        "tallas": ["S","M","L"],
+        "imagen": "img/prendas/KB-004.jpg"
+    },
+    {
+        "id": 5,
+        "codigo": "KB-005",
+        "nombre": "Camisa Negra Paisley",
+        "descripcion": "Camisa negra de manga larga con estampado blanco de arabescos y flores.",
+        "precio": 74.90,
+        "colores": ["Negro","Terracota","Rosa taupe"],
+        "tallas": ["S","M","L","XL"],
+        "imagen": "img/prendas/KB-005.jpg"
+    },
+    {
+        "id": 6,
+        "codigo": "KB-006",
+        "nombre": "Top Púrpura Asimétrico",
+        "descripcion": "Top color púrpura con diseño asimétrico y detalle de flor en el hombro.",
+        "precio": 49.90,
+        "colores": ["Púrpura","Mostaza","Verde"],
+        "tallas": ["S","M","L"],
+        "imagen": "img/prendas/KB-006.jpg"
+    },
+    {
+        "id": 7,
+        "codigo": "KB-007",
+        "nombre": "Top Verde con Moño",
+        "descripcion": "Top verde azulado sin mangas con escote asimétrico y moño decorativo.",
+        "precio": 54.90,
+        "colores": ["Verde","Mostaza","Púrpura"],
+        "tallas": ["S","M","L"],
+        "imagen": "img/prendas/KB-007.jpg"
+    },
+    {
+        "id": 8,
+        "codigo": "KB-008",
+        "nombre": "Conjunto Palazzo Marino",
+        "descripcion": "Conjunto de top blanco acanalado tipo halter y pantalón palazzo azul marino.",
+        "precio": 119.90,
+        "colores": ["Blanco / Marino"],
+        "tallas": ["S","M","L","XL"],
+        "imagen": "img/prendas/KB-008.jpg"
+    },
+    {
+        "id": 9,
+        "codigo": "KB-009",
+        "nombre": "Conjunto Beige Elegante",
+        "descripcion": "Conjunto de top blanco de un hombro y pantalón wide leg beige con botones.",
+        "precio": 114.90,
+        "colores": ["Blanco / Beige","Blanco / Rosa"],
+        "tallas": ["S","M","L","XL"],
+        "imagen": "img/prendas/KB-009.jpg"
+    },
+    {
+        "id": 10,
+        "codigo": "KB-010",
+        "nombre": "Conjunto Rosa Empolvado",
+        "descripcion": "Conjunto de top blanco de un hombro y pantalón wide leg en rosa empolvado.",
+        "precio": 119.90,
+        "colores": ["Blanco / Rosa","Blanco / Beige"],
+        "tallas": ["S","M","L","XL"],
+        "imagen": "img/prendas/KB-010.jpg"
+    },
+    {
+        "id": 11,
+        "codigo": "KB-011",
+        "nombre": "Top Café con Encaje",
+        "descripcion": "Top sin mangas color café con corte asimétrico y borde de encaje floral.",
+        "precio": 64.90,
+        "colores": ["Café","Borgoña"],
+        "tallas": ["S","M","L"],
+        "imagen": "img/prendas/KB-011.jpg"
+    },
+    {
+        "id": 12,
+        "codigo": "KB-012",
+        "nombre": "Top Borgoña de un Hombro",
+        "descripcion": "Top entallado color borgoña con diseño de un solo hombro.",
+        "precio": 54.90,
+        "colores": ["Borgoña","Negro","Beige"],
+        "tallas": ["S","M","L"],
+        "imagen": "img/prendas/KB-012.jpg"
+    },
+    {
+        "id": 13,
+        "codigo": "KB-013",
+        "nombre": "Conjunto Paisley y Short Beige",
+        "descripcion": "Camisa terracota con estampado paisley abierta, top blanco y short beige con cadena dorada.",
+        "precio": 139.90,
+        "colores": ["Terracota / Beige"],
+        "tallas": ["S","M","L","XL"],
+        "imagen": "img/prendas/KB-013.jpg"
+    },
+    {
+        "id": 14,
+        "codigo": "KB-014",
+        "nombre": "Conjunto Paisley Vista Frontal",
+        "descripcion": "Outfit de camisa paisley terracota, top blanco y short beige con detalle de cadena.",
+        "precio": 139.90,
+        "colores": ["Terracota / Beige"],
+        "tallas": ["S","M","L","XL"],
+        "imagen": "img/prendas/KB-014.jpg"
+    },
+    {
+        "id": 15,
+        "codigo": "KB-015",
+        "nombre": "Top Blanco Asimétrico y Short",
+        "descripcion": "Top strapless blanco de corte asimétrico con short beige y cadena dorada.",
+        "precio": 89.90,
+        "colores": ["Blanco / Beige"],
+        "tallas": ["S","M","L"],
+        "imagen": "img/prendas/KB-015.jpg"
+    },
+    {
+        "id": 16,
+        "codigo": "KB-016",
+        "nombre": "Conjunto Short Rosa",
+        "descripcion": "Top blanco de un hombro con short rosa claro y detalle de cadena dorada.",
+        "precio": 94.90,
+        "colores": ["Blanco / Rosa"],
+        "tallas": ["S","M","L"],
+        "imagen": "img/prendas/KB-016.jpg"
+    },
+    {
+        "id": 17,
+        "codigo": "KB-017",
+        "nombre": "Top Rayas Rosa Halter",
+        "descripcion": "Top halter acanalado con rayas horizontales rosa y blanco.",
+        "precio": 44.90,
+        "colores": ["Rosa / Blanco"],
+        "tallas": ["S","M","L"],
+        "imagen": "img/prendas/KB-017.jpg"
+    },
+    {
+        "id": 18,
+        "codigo": "KB-018",
+        "nombre": "Blusa Borgoña con Broche",
+        "descripcion": "Blusa de manga corta color borgoña con hombro descubierto y broche floral dorado.",
+        "precio": 59.90,
+        "colores": ["Borgoña","Rosa","Vino"],
+        "tallas": ["S","M","L","XL"],
+        "imagen": "img/prendas/KB-018.jpg"
+    },
+    {
+        "id": 19,
+        "codigo": "KB-019",
+        "nombre": "Blusa Blanca Off Shoulder",
+        "descripcion": "Blusa blanca de hombros descubiertos con ribete de encaje floral y mangas amplias.",
+        "precio": 64.90,
+        "colores": ["Blanco"],
+        "tallas": ["S","M","L","XL"],
+        "imagen": "img/prendas/KB-019.jpg"
+    },
+    {
+        "id": 20,
+        "codigo": "KB-020",
+        "nombre": "Blusa Vino con Broche Plateado",
+        "descripcion": "Blusa color vino con escote asimétrico, hombro descubierto y broche floral plateado.",
+        "precio": 59.90,
+        "colores": ["Vino","Borgoña","Rosa"],
+        "tallas": ["S","M","L","XL"],
+        "imagen": "img/prendas/KB-020.jpg"
+    },
+    {
+        "id": 21,
+        "codigo": "KB-021",
+        "nombre": "Blusa Rosa con Rosa Dorada",
+        "descripcion": "Blusa rosa empolvado con diseño asimétrico, hombro descubierto y broche de rosa dorada.",
+        "precio": 59.90,
+        "colores": ["Rosa","Borgoña","Vino"],
+        "tallas": ["S","M","L","XL"],
+        "imagen": "img/prendas/KB-021.jpg"
+    },
+    {
+        "id": 22,
+        "codigo": "KB-022",
+        "nombre": "Top Blanco con Flores",
+        "descripcion": "Top blanco sin mangas con escote fruncido y tirantes decorados con flores de tela.",
+        "precio": 54.90,
+        "colores": ["Blanco"],
+        "tallas": ["S","M","L"],
+        "imagen": "img/prendas/KB-022.jpg"
+    },
+    {
+        "id": 23,
+        "codigo": "KB-023",
+        "nombre": "Top Borgoña con Encaje",
+        "descripcion": "Top sin mangas color borgoña con corte asimétrico y borde de encaje floral.",
+        "precio": 64.90,
+        "colores": ["Borgoña","Café"],
+        "tallas": ["S","M","L"],
+        "imagen": "img/prendas/KB-023.jpg"
+    },
+    {
+        "id": 24,
+        "codigo": "KB-024",
+        "nombre": "Blusa Rosa Escote en V",
+        "descripcion": "Blusa de manga corta en tono rosa salmón con escote en V.",
+        "precio": 44.90,
+        "colores": ["Rosa salmón","Beige","Blanco"],
+        "tallas": ["S","M","L","XL"],
+        "imagen": "img/prendas/KB-024.jpg"
+    },
+    {
+        "id": 25,
+        "codigo": "KB-025",
+        "nombre": "Top Beige con Cuello",
+        "descripcion": "Top beige sin mangas con cuello, escote en V y detalle fruncido en el pecho.",
+        "precio": 49.90,
+        "colores": ["Beige","Blanco","Negro"],
+        "tallas": ["S","M","L","XL"],
+        "imagen": "img/prendas/KB-025.jpg"
+    },
+    {
+        "id": 26,
+        "codigo": "KB-026",
+        "nombre": "Top Morado Cuello Cuadrado",
+        "descripcion": "Top morado sin mangas con cuello cuadrado y tirantes anchos.",
+        "precio": 49.90,
+        "colores": ["Morado","Negro","Beige"],
+        "tallas": ["S","M","L"],
+        "imagen": "img/prendas/KB-026.jpg"
+    },
+    {
+        "id": 27,
+        "codigo": "KB-027",
+        "nombre": "Top Azul Claro",
+        "descripcion": "Top azul claro sin mangas, entallado y con cuello redondo.",
+        "precio": 44.90,
+        "colores": ["Azul claro","Blanco","Negro"],
+        "tallas": ["S","M","L"],
+        "imagen": "img/prendas/KB-027.jpg"
+    },
+    {
+        "id": 28,
+        "codigo": "KB-028",
+        "nombre": "Top Blanco Halter Asimétrico",
+        "descripcion": "Top blanco acanalado tipo halter con escote alto y bajo asimétrico.",
+        "precio": 49.90,
+        "colores": ["Blanco"],
+        "tallas": ["S","M","L"],
+        "imagen": "img/prendas/KB-028.jpg"
+    },
+    {
+        "id": 29,
+        "codigo": "KB-029",
+        "nombre": "Top Beige Drapeado",
+        "descripcion": "Top beige de un solo hombro con fruncido lateral y corte asimétrico.",
+        "precio": 54.90,
+        "colores": ["Beige","Mauve"],
+        "tallas": ["S","M","L"],
+        "imagen": "img/prendas/KB-029.jpg"
+    },
+    {
+        "id": 30,
+        "codigo": "KB-030",
+        "nombre": "Conjunto Beige y Short Negro",
+        "descripcion": "Top beige de un hombro con short negro y detalle de cadena dorada.",
+        "precio": 99.90,
+        "colores": ["Beige / Negro"],
+        "tallas": ["S","M","L","XL"],
+        "imagen": "img/prendas/KB-030.jpg"
+    },
+    {
+        "id": 31,
+        "codigo": "KB-031",
+        "nombre": "Top Mauve de un Hombro",
+        "descripcion": "Top entallado tono mauve con diseño de un solo hombro y fruncido.",
+        "precio": 49.90,
+        "colores": ["Mauve","Beige","Negro"],
+        "tallas": ["S","M","L"],
+        "imagen": "img/prendas/KB-031.jpg"
+    },
+    {
+        "id": 32,
+        "codigo": "KB-032",
+        "nombre": "Vestido Midi Terracota",
+        "descripcion": "Vestido midi entallado color terracota, sin mangas y con espalda abierta. Incluye variantes en verde limón y dorado.",
+        "precio": 119.90,
+        "colores": ["Terracota", "Verde limón", "Dorado"],
+        "tallas": ["S", "M", "L"],
+        "imagen": "img/prendas/KB-032.jpg",
+        "imagenes": [
+            "img/prendas/KB-032.jpg",
+            "img/prendas/KB-033.jpg",
+            "img/prendas/KB-034.jpg"
+        ]
+    },
+    {
+        "id": 35,
+        "codigo": "KB-035",
+        "nombre": "Conjunto Verde Estampado",
+        "descripcion": "Conjunto de top con volantes y short con cinturón, estampado abstracto verde y blanco.",
+        "precio": 109.90,
+        "colores": ["Verde / Blanco"],
+        "tallas": ["S", "M", "L", "XL"],
+        "imagen": "img/prendas/KB-035.jpg"
+    }
+]

@@ -169,10 +169,15 @@
                 <div class="modal-body">
                     <div class="row g-4 align-items-center">
                         <div class="col-md-6">
-                            <img id="modalProductoImagen" class="img-fluid producto-modal-img" src="" alt="">
+                            <div class="producto-modal-galeria">
+                                <img id="modalProductoImagen" class="img-fluid producto-modal-img" src="" alt="">
+                                <div id="modalProductoThumbs" class="producto-modal-thumbs d-none" aria-label="Más imágenes"></div>
+                            </div>
                         </div>
                         <div class="col-md-6">
+                            <p id="modalProductoCodigo" class="producto-codigo mb-2"></p>
                             <p id="modalProductoDescripcion" class="producto-modal-desc"></p>
+                            <div id="modalProductoOpciones" class="producto-opciones"></div>
                             <p id="modalProductoPrecio" class="producto-precio producto-modal-precio mb-0"></p>
                         </div>
                     </div>
